@@ -1,0 +1,20 @@
+{
+  "syncInterval": 1200000,
+  "syncTargets": {
+    "groupChat": "oc_9c8f8e6105a62cc18815d574675ea81e",
+    "directChat": "ou_39a8ff4601b6d089d72cbc981523bc76"
+  },
+  "lastCheck": {
+    "timestamp": "2026-03-21T06:41:00+08:00",
+    "lastMessageId": "om_x100b54d7958c54acc4f3afaa95ffcbd"
+  },
+  "rules": {
+    "skipIfLessThan": 1200000,
+    "quietHours": {
+      "start": "23:00",
+      "end": "08:00"
+    },
+    "reportAll": true
+  },
+  "note": "单聊和群聊记录同步间隔：20 分钟"
+}
