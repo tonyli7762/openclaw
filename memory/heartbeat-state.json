@@ -1,0 +1,56 @@
+{
+  "lastCheck": {
+    "timestamp": "2026-03-24T11:28:00+08:00",
+    "lastMessageId": null
+  },
+  "checks": {
+    "email": null,
+    "calendar": null,
+    "weather": "2026-03-24T11:28:00+08:00",
+    "groupSync": "2026-03-22T18:27:00+08:00"
+  },
+  "cronDaemon": {
+    "status": "stopped",
+    "pid": null,
+    "bug": "时间比较逻辑错误，任务无法触发",
+    "lastLogCheck": "2026-03-24T01:47:53+08:00"
+  },
+  "skills": {
+    "newlyInstalled": [
+      "find-skills (12:45)",
+      "clawhub-cli-v0.9.0 (12:49)",
+      "tavily-web-search (12:54)",
+      "summarize (13:06)"
+    ],
+    "todayInstalled": [
+      "marketingskills (26 个技能)",
+      "baoyu-skills (15 个技能)",
+      "github-integration",
+      "skill-creator"
+    ],
+    "total": 53
+  },
+  "reports": {
+    "风口情报官日报": {
+      "scheduled": "18:00",
+      "actual": "18:21",
+      "status": "已完成 + 已发送"
+    },
+    "总控助理日报": {
+      "scheduled": "21:00",
+      "actual": "21:11",
+      "status": "已完成 + 已发送"
+    }
+  },
+  "github": {
+    "status": "configured",
+    "user": "@tonyli7762",
+    "repo": "tonyli7762/openclaw",
+    "backup": "✅ 已完成 (README.md, BACKUP_INFO.md, config/openclaw.json)"
+  },
+  "nextReport": {
+    "scheduled": "18:00",
+    "countdown": "约 7 小时",
+    "status": "待执行（需修复 cron）"
+  }
+}
