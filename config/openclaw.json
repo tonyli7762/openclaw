@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-23T06:17:21.840Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-23T06:17:21.822Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "checkOnStart": false
+  },
+  "browser": {
+    "enabled": true,
+    "executablePath": "/home/node/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome",
+    "headless": true,
+    "noSandbox": true,
+    "defaultProfile": "openclaw"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "bailian-coding-plan": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-sp-9147dbe4efe34860890308b62c8898de",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5-plus",
+            "name": "qwen3.5-plus",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 256000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "bailian-coding-plan/qwen3.5-plus"
+      },
+      "userTimezone": "Asia/beijing",
+      "heartbeat": {
+        "every": "30m"
+      }
+    }
+  },
+  "tools": {
+    "profile": "full",
+    "sessions": {
+      "visibility": "all"
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "feishu": {
+      "accounts": {
+        "default": {
+          "dmPolicy": "allow"
+        },
+        "main": {
+          "appId": "cli_a92f3141c7389ccb",
+          "appSecret": "4XLWG7oyNuFzI3zRIwdPg1Wt8SUtvOot",
+          "botName": "飞驰人生-总控助理"
+        }
+      },
+      "dmPolicy": "allow",
+      "enabled": true,
+      "requireMention": false
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "allowedOrigins": [
+        "https://192.168.1.4:18790"
+      ],
+      "dangerouslyDisableDeviceAuth": false
+    },
+    "auth": {
+      "mode": "token",
+      "token": "cefeetrtxkttztfae864f3bjeidz88za"
+    },
+    "trustedProxies": [
+      "127.0.0.1/32"
+    ]
+  },
+  "plugins": {
+    "allow": [
+      "feishu",
+      "memory-lancedb-pro"
+    ],
+    "slots": {
+      "memory": "memory-lancedb-pro"
+    },
+    "entries": {
+      "feishu": {
+        "enabled": true
+      },
+      "memory-lancedb-pro": {
+        "enabled": true,
+        "config": {
+          "autoCapture": true,
+          "autoRecall": true,
+          "captureAssistant": false,
+          "embedding": {
+            "apiKey": "ollama",
+            "baseURL": "http://192.168.1.2:11434/v1",
+            "dimensions": 768,
+            "model": "nomic-embed-text-v2-moe",
+            "provider": "openai-compatible"
+          },
+          "extractMaxChars": 4000,
+          "extractMinMessages": 2,
+          "llm": {
+            "apiKey": "ollama",
+            "baseURL": "http://192.168.1.2:11434/v1",
+            "model": "qwen3.5:9b"
+          },
+          "mdMirror": {
+            "dir": "~/.openclaw/memory/md-mirror",
+            "enabled": true
+          },
+          "retrieval": {
+            "bm25Weight": 0.3,
+            "filterNoise": true,
+            "hardMinScore": 0.28,
+            "minScore": 0.25,
+            "mode": "hybrid",
+            "vectorWeight": 0.7
+          },
+          "sessionStrategy": "none",
+          "smartExtraction": true
+        }
+      }
+    }
+  }
+}
